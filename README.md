@@ -1,21 +1,21 @@
 <h1>ENCRIPTADOR DE TEXTO</h1>
 ![Vista del encriptador de texto](https://github.com/user-attachments/assets/Portada.png)
 <h2>Descripción del proyecto</h2>
-Encriptador de texto realizado para el Challenge ONE Front End de Alura-Latam.
-Esta página web permite encriptar y desencriptar un texto, además de copiarlo al portapapeles.
+<p>Encriptador de texto realizado para el Challenge ONE Front End de Alura-Latam.</p>
+<p>Esta página web permite encriptar y desencriptar un texto, además de copiarlo al portapapeles.</p>
 <h3>Funcionalidad</h3>
-La encriptación funciona de ida y vuelta usando las claves:
-- La letra "e" es convertida para "enter"
-- La letra "i" es convertida para "imes"
-- La letra "a" es convertida para "ai"
-- La letra "o" es convertida para "ober"
-- La letra "u" es convertida para "ufat"
+<p>La encriptación funciona de ida y vuelta usando las claves:
+<p>La letra "e" es convertida para "enter"
+<br>La letra "i" es convertida para "imes"
+<br>La letra "a" es convertida para "ai"
+<br>La letra "o" es convertida para "ober"
+<br>La letra "u" es convertida para "ufat"</p>
 <h3>Requisitos</h3>
-- Debe funcionar solo con letras minúsculas
-- No deben ser utilizados letras con acentos ni caracteres especiales
-- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
-- La página debe tener campos parainserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
-- El resultado debe ser mostrado en la pantalla.
+<p>- Debe funcionar solo con letras minúsculas<br>
+- No deben ser utilizados letras con acentos ni caracteres especiales<br>
+- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.<br>
+- La página debe tener campos parainserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.<br>
+- El resultado debe ser mostrado en la pantalla.</p>
 <h3>Ejemplo</h3>
 "gato" => "gaitober"
 gaitober" => "gato"
