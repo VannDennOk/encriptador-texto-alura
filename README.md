@@ -10,11 +10,11 @@
 <br>La letra "o" es convertida para "ober"
 <br>La letra "u" es convertida para "ufat"</p>
 <h3>Requisitos</h3>
-<p>Debe funcionar solo con letras minúsculas
-<br>No deben ser utilizados letras con acentos ni caracteres especiales.
-<br>La página debe tener campos para la inserción del texto que será encriptado o desencriptado.
-<br>El usuario debe poder escoger entre las dos opciones: encriptar o desencriptar.
-<br>El resultado debe ser mostrado en la pantalla.</p>
+<p>  :heavy_check_mark: Debe funcionar solo con letras minúsculas
+<br>  :heavy_check_mark: No deben ser utilizados letras con acentos ni caracteres especiales.
+<br>  :heavy_check_mark: La página debe tener campos para la inserción del texto que será encriptado o desencriptado.
+<br>  :heavy_check_mark: El usuario debe poder escoger entre las dos opciones: encriptar o desencriptar.
+<br>  :heavy_check_mark: El resultado debe ser mostrado en la pantalla.</p>
 <h3>Ejemplo</h3>
 <p>"gato" => "gaitober"
 <br>gaitober" => "gato"</p>
