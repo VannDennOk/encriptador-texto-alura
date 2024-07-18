@@ -1,7 +1,6 @@
 
 function condicionesIniciales(){
   document.getElementById("mensajeInicial").value = "";
-  document.getElementById("desencriptar").disabled = true;
 }
 
 function encriptar(){
@@ -13,20 +12,23 @@ function encriptar(){
     .replace(/o/gi, "ober")
     .replace(/u/gi, "ufat");
   
-    if (texto.length != 0) {
-      document.getElementById("mensajeFinal").value = textoCifrado;
-      document.getElementById("mensajeInicial").value = "";
-      document.getElementById("ocultar").style.display= "none";
-      document.getElementById("mensajeFinal").style.display= "block";
-      document.getElementById("copiar").style.display= "block";
-      document.getElementById("desencriptar").disabled = false;
-    } else {
+    if (texto === "") {
       mensajeCampoVacio();
+    } else {
+        if (!validarTexto(texto)){
+          return;
+        } else { 
+          document.getElementById("mensajeFinal").value = textoCifrado;
+          document.getElementById("mensajeInicial").value = "";
+          document.getElementById("ocultar").style.display= "none";
+          document.getElementById("mensajeFinal").style.display= "block";
+          document.getElementById("copiar").style.display= "block";
+        }
     }
 }
 
 function desencriptar(){
-  let textoCifrado = document.getElementById("mensajeFinal").value;
+  let textoCifrado = document.getElementById("mensajeInicial").value;
   let texto = textoCifrado
     .replace(/al/gi, "a")
     .replace(/enter/gi, "e")
@@ -34,16 +36,30 @@ function desencriptar(){
     .replace(/ober/gi, "o")
     .replace(/ufat/gi, "u");
 
-    if (textoCifrado.length != 0) {
-      document.getElementById("mensajeInicial").value = texto;
-      document.getElementById("mensajeFinal").value = "";
-      document.getElementById("ocultar").style.display= "block";
-      document.getElementById("mensajeFinal").style.display= "none";
-      document.getElementById("copiar").style.display= "none";
-      document.getElementById("desencriptar").disabled = true;
-    } else {
+    if (texto === "") {
       mensajeCampoVacio();
+    } else {
+        if (!validarTexto(textoCifrado)){
+          return;
+        } else { 
+          document.getElementById("mensajeFinal").value = texto;
+          document.getElementById("mensajeInicial").value = "";
+          document.getElementById("ocultar").style.display= "none";
+          document.getElementById("mensajeFinal").style.display= "block";
+          document.getElementById("copiar").style.display= "block";
+        }
     }
+  }
+
+function validarTexto() {
+  let textoValidar= document.getElementById("mensajeInicial").value;
+  const contieneMayusculas = /[A-ZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜÑÂÊÎÔÛ]/.test(textoValidar);
+  const contieneAcentos = /[áéíóúàèìòùäëïöüñâêîôû]/.test(textoValidar);
+  const contieneCaracteresEspeciales = /[@#$%&/¨`~*^{}°<>]/.test(textoValidar);
+
+  if (contieneMayusculas || contieneAcentos || contieneCaracteresEspeciales) {
+    mensajeError();
+  } return true;
 }
   
 function copiarTexto(){
@@ -77,6 +93,25 @@ function mensajeCampoVacio(){
       imageAlt: 'icono de exclamación o alerta',
     });
   }
+}
+
+function mensajeError(){
+  Swal.fire({
+    html: '<p class="popup__texto">No acepta mayúsculas, acentos o carácteres especiales</p>',
+    confirmButtonText: 'Aceptar',
+    customClass: {
+      popup:'popup__box',
+      closeButton:'popup__closeButton',
+      confirmButton:'popup__button', 
+    },
+    confirmButtonAriaLabel: 'Aceptar',
+    buttonsStyling: false,
+    showCloseButton: true,
+    closeButtonArialLabel: 'cerrar alerta',
+    imageUrl: 'assets/Exclamation.png',
+    imageWidth: '80px',
+    imageAlt: 'icono de exclamación o alerta',
+  });
 }
 
 function mensajeCampoVacioCopiar(){

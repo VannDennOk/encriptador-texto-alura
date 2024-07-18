@@ -119,7 +119,7 @@ textarea{
 }
 
 /*botones - definición del espacio que ocupan*/
-.container1__buttons{
+.container1__button{
     height: 67px;
     width: 100%;
     display: flex;
@@ -127,7 +127,7 @@ textarea{
 }
 
 /*botones - formato*/
-.container1__buttons__style{
+.container1__button__encriptar{
     width: 49%;
     font-family: var(--font-inter);
     font-size: 1rem;
@@ -141,22 +141,19 @@ textarea{
     cursor: pointer;
 }
 
-/*botones - deshabilitado*/
-.container1__buttons__style:disabled{
-    background-color: var(--color-botonInactivo);
+/*botones - formato*/
+.container1__button__desencriptar{
+    width: 49%;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--color-DarkBlue300-acento);
-}
-
-/*botones - deshabilitado SIN HOVER*/
-.container1__buttons__style:disabled:hover{
     background-color: var(--color-botonInactivo);
-    color: var(--color-DarkBlue300-acento);
-}
-
-/*botones - formato cuando se pasa el cursor por arriba*/
-.container1__buttons__style:hover{
-    background-color: var(--color-DarkBlue200-hover);
-    color: var(--color-White);
+    border: 1px solid var(--color-DarkBlue300-acento);
+    border-radius: 24px;
+    padding: 24px 24px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 /*CONTAINER 2*/
@@ -244,12 +241,6 @@ textarea{
     cursor: pointer;
 }
 
-/*botones - formato cuando se pasa el cursor por arriba*/
-.container2__button__copiar:hover{
-    background-color: var(--color-DarkBlue200-hover);
-    color: var(--color-White);
-}
-
 /*FOOTER*/
 .footer{
     height: 50px;
@@ -282,7 +273,6 @@ textarea{
 }
 
 /*FORMATO DE LOS POPUP o MENSAJES*/
-
 .popup__texto{
     font-family: var(--font-inter);
     font-size: 1rem;
@@ -293,7 +283,7 @@ textarea{
 
 .popup__box{
     background-color: var(--color-White);
-    width: 40%;
+    width: 50%;
     padding: 2% 2% 2% 2%;
     border-radius: 24px;
 }
@@ -317,17 +307,22 @@ textarea{
     transition: 0.4s;
 }
 
-.popup__button:hover{
-    background-color: var(--color-DarkBlue200-hover);
-    color: var(--color-White);
-}
-
 .popup__closeButton{
-    color: var(--color-Gray400-texto);
+    color: var(--color-botonInactivo);
 }
 
 .popup__closeButton:hover{
         color: var(--color-Gray500-texto);
+}
+
+/*HOVER BUTTONS*/
+/*botones - formato cuando se pasa el cursor por arriba*/
+.container1__button__encriptar:hover,
+.container1__button__desencriptar:hover,
+.container2__button__copiar:hover,
+.popup__button:hover{
+    background-color: var(--color-DarkBlue200-hover);
+    color: var(--color-White);
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -367,10 +362,10 @@ textarea{
         margin-top: 1%;
         margin-bottom: 2%;
     }
-    .container1__buttons, .section2__button{
+    .container1__button, .container2__button{
         height: 57px;
     }
-    .container1__buttons__style, .section2__button__copiar{
+    .container1__button__encriptar, .container1__button__desencriptar, .container2__button__copiar{
         border-radius: 20px;
         padding: 14px 24px;
     }
@@ -443,7 +438,7 @@ textarea{
     .container1__advertencia{
         margin: 1% 0% 2%;
     }
-    .container1__buttons, .container2__button{
+    .container1__button, .container2__button{
         height: 45px;
         display: flex;
         flex-direction: column;
@@ -451,7 +446,7 @@ textarea{
         gap: 5px;
         padding: 0%;
     }
-    .container1__buttons__style, .container2__button__copiar{        
+    .container1__button__encriptar, .container1__button__desencriptar, .container2__button__copiar{   
         width: 100%;
         border-radius: 20px;
         padding: 8px 24px;
