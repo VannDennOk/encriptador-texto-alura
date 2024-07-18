@@ -4,11 +4,11 @@
 <p>Esta página web permite encriptar y desencriptar un texto, además de copiarlo al portapapeles.</p>
 <h3>Funcionalidad</h3>
 <p>La encriptación funciona de ida y vuelta usando las claves:<br>
-<br>La letra "e" es convertida para "enter"
-<br>La letra "i" es convertida para "imes"
-<br>La letra "a" es convertida para "ai"
-<br>La letra "o" es convertida para "ober"
-<br>La letra "u" es convertida para "ufat"</p>
+<br>  :small_blue_diamond: La letra "e" es convertida para "enter"
+<br>  :small_blue_diamond: La letra "i" es convertida para "imes"
+<br>  :small_blue_diamond: La letra "a" es convertida para "ai"
+<br>  :small_blue_diamond: La letra "o" es convertida para "ober"
+<br>  :small_blue_diamond: La letra "u" es convertida para "ufat"</p>
 <h3>Requisitos</h3>
 <p>  :heavy_check_mark: Debe funcionar solo con letras minúsculas
 <br>  :heavy_check_mark: No deben ser utilizados letras con acentos ni caracteres especiales.
