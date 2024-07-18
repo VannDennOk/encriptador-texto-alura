@@ -21,3 +21,11 @@ La encriptación funciona de ida y vuelta usando las claves:
 gaitober" => "gato"
 <h3>Extras</h3>
 Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
+<h2>Acceso al proyecto</h2>
+https://github.com/VannDennOk/encriptador-texto-alura
+https://vanndennok.github.io/encriptador-texto-alura/
+<h2>Autoría</h2>
+El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.
+https://github.com/VannDennOk
+https://www.linkedin.com/in/vaninadenegri/
+
