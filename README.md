@@ -21,10 +21,10 @@
 <h3>Extras</h3>
 <p>Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.</p>
 <h2>Acceso al proyecto</h2>
-<a></a>https://github.com/VannDennOk/encriptador-texto-alura
-<br><a></a>https://vanndennok.github.io/encriptador-texto-alura
+<p>Git Hub: https://github.com/VannDennOk/encriptador-texto-alura</p>
+<p>Git Hub Page: https://vanndennok.github.io/encriptador-texto-alura</p>
 <h2>Autoría</h2>
-El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.
-<a></a>https://github.com/VannDennOk
-<br><a></a>https://www.linkedin.com/in/vaninadenegri
+<p>El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.</p>
+<p>Mi perfil de Git Hub: https://github.com/VannDennOk</p>
+<p>Mi perfil de LinkedIn: https://www.linkedin.com/in/vaninadenegri</p>
 
