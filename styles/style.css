@@ -1,0 +1,490 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*
+font-style: 400;    --> Regular
+font-style: 700;    --> Bold
+font-size: 16px = 1rem
+*/
+
+/*variables en css*/
+:root{
+    --color-DarkBlue300-acento: #0A3871;
+    --color-DarkBlue200-hover: #356EA9;
+    --color-Gray400-texto: #495057;
+    --color-Gray500-texto: #343A40;
+    --color-LightBlue100-fondo: #f3f5fc;
+    --color-White: #ffffff;
+    --color-botonInactivo: #d8dfe8;
+    --font-inter: "Inter", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-LightBlue100-fondo);
+}
+
+/*ORGANIZA TODOS LOS ELEMENTOS: LOGO CONTAINER 1 Y CONTAINER 2*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100vh;
+    width: 98vw;
+}
+
+.logo{
+    padding: 1% 0 0;
+}
+
+/*CONTAINER 1*/
+/*parte izquierda*/
+.container1{
+    width: 55%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*agrego un titulo para que se entienda mejor la funcionalidad de la página*/
+.container1__titulo{
+    left: 1%;
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-DarkBlue300-acento);
+}
+
+/*recuadro para ingresar el texto a encriptar*/
+.container1__areaTexto{
+    width: 100%;
+    height: 56%;
+    background-color: var(--color-LightBlue100-fondo);
+    text-align: left;
+    margin-top: 7%;
+    resize: none;
+}
+
+/*como se va a ver el texto escrito*/
+textarea{
+    color: var(--color-DarkBlue300-acento);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: transparent;
+    line-height: 150%;
+}
+
+/*mensaje que ahí debe escribirse*/
+::placeholder{
+    color: var(--color-DarkBlue300-acento);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*mensaje de adevrtencia - definición del espacio que ocupa*/
+.container1__advertencia{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+/*mensaje de adevrtencia - formato del ícono*/
+.container1__advertencia__icono{
+    width: 16px;
+    height: 16px;
+}
+
+/*mensaje de adevrtencia - formato del texto*/
+.container1__advertencia__texto{
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-Gray400-texto);
+    margin-left: 1%;
+}
+
+/*botones - definición del espacio que ocupan*/
+.container1__buttons{
+    height: 67px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*botones - formato*/
+.container1__buttons__style{
+    width: 49%;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-White);
+    background-color: var(--color-DarkBlue300-acento);
+    border: 1px solid var(--color-DarkBlue300-acento);
+    border-radius: 24px;
+    padding: 24px 24px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/*botones - deshabilitado*/
+.container1__buttons__style:disabled{
+    background-color: var(--color-botonInactivo);
+    color: var(--color-DarkBlue300-acento);
+}
+
+/*botones - deshabilitado SIN HOVER*/
+.container1__buttons__style:disabled:hover{
+    background-color: var(--color-botonInactivo);
+    color: var(--color-DarkBlue300-acento);
+}
+
+/*botones - formato cuando se pasa el cursor por arriba*/
+.container1__buttons__style:hover{
+    background-color: var(--color-DarkBlue200-hover);
+    color: var(--color-White);
+}
+
+/*CONTAINER 2*/
+/*parte derecha*/
+.container2{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+/*rectángulo blanco*/
+.container2__box{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-White);
+    border-radius: 32px;
+    box-shadow: 0px 8px 16px -8px var(--color-Gray400-texto);
+    padding: 3%;    
+}
+
+/*imagen que desaparece al encriptar el texto*/
+.container2__imagenMunieco{
+    width: 100%;
+    padding: 30% 20% 0%;
+}
+
+/*Titulo que desaparece al encriptar el texto*/
+.container2__titulo{
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-Gray500-texto);
+    text-align: center;
+    padding: 5% 20% 0%;
+}
+
+/*texto que desaparece al encriptar el texto*/
+.container2__texto{
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-Gray400-texto);
+    text-align: center;
+    padding: 5% 20% 20%;
+}
+
+/*área que muestra el texto encriptado - se muestra luego de hacer click en el botón*/
+.container2__areaTexto2{
+    width: 90%;
+    margin-top: 5%;
+    height: 70%;
+    text-align: left;
+    resize: none;
+}
+
+/*boton COPIAR - definición del espacio que ocupa*/
+.container2__button{
+    height: 67px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/*boton COPIAR - formato*/
+.container2__button__copiar{
+    width: 100%;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-DarkBlue300-acento);
+    background-color: var(--color-White);
+    border: 1px solid var(--color-DarkBlue300-acento);
+    border-radius: 24px;
+    padding: 24px 24px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/*botones - formato cuando se pasa el cursor por arriba*/
+.container2__button__copiar:hover{
+    background-color: var(--color-DarkBlue200-hover);
+    color: var(--color-White);
+}
+
+/*FOOTER*/
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-DarkBlue300-acento);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    padding: 20px 20px 20px 20px;
+}
+
+.footer__text{
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-White);
+}
+
+.footer__link{
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__link__icon{
+    width: 50%;
+}
+
+/*FORMATO DE LOS POPUP o MENSAJES*/
+
+.popup__texto{
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-Gray500-texto);
+    padding: 1%;
+}
+
+.popup__box{
+    background-color: var(--color-White);
+    width: 40%;
+    padding: 2% 2% 2% 2%;
+    border-radius: 24px;
+}
+
+.popup__button{
+    width: 120px;
+    height: 50px;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-White);
+    background-color: var(--color-DarkBlue300-acento);
+    padding: 16px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.popup__button:hover{
+    background-color: var(--color-DarkBlue200-hover);
+    color: var(--color-White);
+}
+
+.popup__closeButton{
+    color: var(--color-Gray400-texto);
+}
+
+.popup__closeButton:hover{
+        color: var(--color-Gray500-texto);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+/*DISEÑO RESPONSIVO - TABLET*/
+@media (max-width: 942px) {
+    .container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .logo{
+        padding: 3%;
+    }
+    .container1{
+        width: 100%;
+        height: 45%;
+        padding: 0% 8%;
+    }
+    .container1__titulo{
+        left: 0%;
+        font-size: 2rem;
+        padding: 0%;
+    }
+    .container1__areaTexto{
+        height: 50%;
+        margin-top: 5%;
+        padding: 0%;
+    }
+    ::placeholder{
+        font-size: 1.5rem;    
+    }
+    textarea{
+        font-size: 1.5rem;
+        line-height: 150%;
+    }
+    .container1__advertencia{
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+    .container1__buttons, .section2__button{
+        height: 57px;
+    }
+    .container1__buttons__style, .section2__button__copiar{
+        border-radius: 20px;
+        padding: 14px 24px;
+    }
+    .container2{
+        width: 100%;
+        height: 38%;
+        padding: 0% 8% 1%;
+    }
+    .container2__box{
+        width: 100%;
+        height: 90%;
+        padding: 2%;
+    }
+    .container2__imagenMunieco{
+        display: none;
+    }
+    .container2__titulo{
+        font-size: 1rem;
+        padding: 15% 0% 1%;
+    }
+    .container2__texto{
+        font-size: 0.75rem;
+        padding: 1% 0%;
+    }
+    .container2__areaTexto2{
+        width: 85%;
+        margin-top: 5%;
+        height: 50%;
+        text-align: left;
+        resize: none;
+    }
+    .footer__link{
+        width: 6%;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+/*DISEÑO RESPONSIVO - CELULAR*/
+@media (max-width: 600px) {
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }  
+    .logo{
+        padding: 3%;
+    }
+    .container1{
+        width: 100%;
+        height: 55%;
+        padding: 0% 8%;
+    }
+    .container1__titulo{
+        left: 0%;
+        font-size: 1.5rem;
+        padding: 0%;
+    }
+    .container1__areaTexto{
+        height: 50%;
+        margin-top: 0%;
+        padding: 0%;
+    }
+    ::placeholder{
+        font-size: 1rem;    
+    }
+    textarea{
+        font-size: 1rem;
+        line-height: 150%;
+    }
+    .container1__advertencia{
+        margin: 1% 0% 2%;
+    }
+    .container1__buttons, .container2__button{
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 0%;
+    }
+    .container1__buttons__style, .container2__button__copiar{        
+        width: 100%;
+        border-radius: 20px;
+        padding: 8px 24px;
+    }
+    .container2{
+        width: 100%;
+        height: 30%;
+        padding: 0% 8% 3%;
+    }
+    .container2__box{
+        width: 100%;
+        height: 95%;
+        padding: 0%;
+    }
+    .container2__imagenMunieco{
+        display: none;
+    }
+    .container2__titulo{
+        font-size: 1rem;
+        padding: 15% 0% 1%;
+    }
+    .container2__texto{
+        font-size: 0.75rem;
+        padding: 1% 0%;
+    }
+    .container2__areaTexto2{
+        width: 85%;
+        margin-top: 3%;
+        height: 30%;
+        text-align: left;
+        resize: none;
+    }
+    .footer__link{
+        width: 6%;
+    }
+}

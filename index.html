@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto Alura Latam por VD</title>
+        <meta name="author" content="Vanina Denegri">
+        <meta name="description" content="Challenge ONE de Alura Latam. Encriptador simple de texto con diseño responsivo." />
+        <link rel="shortcut icon" href="assets/Favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles/style.css">    
+    </head>
+
+    <body>       
+        <header class="header"> </header> <!-- ESTA PARTE QUEDA VACÍA -->    
+
+        <main>
+            <div class="container"> 
+                <div class="logo"> <!-- LOGO DENTRO DEL BODY Y NO EN EL ENCABEZADO PARA QUE QUEDE MEJOR-->
+                    <img src="assets/Logo.png" alt="Logo con forma de a minúscula" class="logo"> 
+                </div>
+                
+                <!-- PARTE IZQUIERDA CON INGRESO DE TEXTO -->    
+                <div class="container1">
+                    <!-- titulo -->
+                    <h1 class="container1__titulo">ENCRIPTADOR DE TEXTO</h1>                 
+                    <!-- area para el ingreso del texto a encriptar -->
+                    <textarea class="container1__areaTexto" id="mensajeInicial" name="mensaje" rows="10" cols="30" placeholder="Ingrese el texto aquí"> </textarea>        
+                                
+                    <!-- mensaje de avdertencia -->
+                    <div class="container1__advertencia">
+                        <img src="assets/Advertencia.png" alt="Icono de advertencia" class="container1__advertencia__icono">
+                        <p class="container1__advertencia__texto">Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    
+                    <!-- area de botones -->
+                    <div class="container1__buttons">
+                        <button class="container1__buttons__style" type="button" onclick="encriptar()" id="encriptar">Encriptar</button>
+                        <button class="container1__buttons__style" type="button" onclick="desencriptar()" id="desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+
+                <!-- PARTE DERECHA CON RESULTADO --> 
+                <div class="container2">
+                    <!-- rectángulo blanco-->
+                    <div class="container2__box">
+                        <!-- area para el resultado del texto encriptado-->
+                        <textarea class="container2__areaTexto2" id="mensajeFinal" name="resultado" rows="10" cols="30" hidden> </textarea>
+                        <!-- area imagen y mensaje que se ocultan al encriptar el texto-->
+                        <div id="ocultar">
+                            <img src="assets/Muñeco.png" alt="Ilustración de niño arrodillado con una lupa mirando un diamante" class="container2__imagenMunieco" id="ocultarMunieco">
+                            <h2 class="container2__titulo" id="ocultarTitulo">Ningún mensaje fue encontrado</h2>
+                            <p class="container2__texto" id="ocultarTexto">Ingresa el texto que desees encriptar o desencriptar</p>
+                        </div>                     
+                        <!-- area del boton que está oculto mientras no se haya encriptado el texto-->
+                        <div class="container2__button">
+                            <button class="container2__button__copiar" type="button" onclick="copiarTexto()" id="copiar" hidden>Copiar</button>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <!-- PIE DE PAGINA CON DATOES PERSONALES -->
+    <footer class="footer">
+        <p class="footer__text">Desarrollado por Vanina Denegri para Alura Latam |</p>
+        <a class="footer__link" href="https://www.linkedin.com/in/vaninadenegri/"> <img src="./assets/Linkedin.png" class="footer__link__icon"></a>
+        <p class="footer__text">| 2024</p>
+    </footer>
+   
+    <!-- VINCULO CON LOS SCRIPTS -->
+    <script src="encriptador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</html>
