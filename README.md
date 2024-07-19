@@ -17,17 +17,14 @@
 <br>:heavy_check_mark: La página debe tener campos para la inserción del texto que será encriptado o desencriptado.
 <br>:heavy_check_mark: El usuario debe poder escoger entre las dos opciones: encriptar o desencriptar.
 <br>:heavy_check_mark: El resultado debe ser mostrado en la pantalla.</p>
-<h3>Ejemplo</h3>      
+<h3>Ejemplo:thumbsup:</h3>      
 <p align="left"><img src="https://img.shields.io/badge/gato_=>_galtober_<=>_galtober_=>_gato-gray?style=flat"></p>
-<h3>Extras</h3>
+<h3>Extras :star:</h3>
 <p>Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.</p>
-<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
 <h2>Acceso al proyecto</h2>
 <p>Git Hub: https://github.com/VannDennOk/encriptador-texto-alura
 <br>Git Hub Page: https://vanndennok.github.io/encriptador-texto-alura</p>
-<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
 <h2>Autoría</h2>
 <p>El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.
 <br>Mi perfil de Git Hub: https://github.com/VannDennOk
 <br>Mi perfil de LinkedIn: https://www.linkedin.com/in/vaninadenegri</p>
-<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
