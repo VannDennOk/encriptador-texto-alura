@@ -1,8 +1,16 @@
+// VARIABLES
+const caracteresEsp = /[\u0022-\u002B\u002F\u0030-\u0039\u003C-\u003E\u0040-\u0060\u007B-\u007E\u00A2-\u00BF\u00C0-\u00FF\u0100-\u017F\u0180-\u024F]/g;
+          // caracteresEsp: excluye elementos del latín básico, latín suplemento, latín extendido A y B (uso UNICODE). Sí se permite: !¡,.:;-¿?
 
+// ESTADO DE LA PAGINA AL INICIO
 function condicionesIniciales(){
   document.getElementById("mensajeInicial").value = "";
+  document.getElementById("ocultar").style.display= "block";
+  document.getElementById("mensajeFinal").style.display= "none";
+  document.getElementById("copiar").style.display= "none";
 }
 
+// FUNCION PARA ENCRIPTAR TEXTO
 function encriptar(){
   let texto = document.getElementById("mensajeInicial").value;
   let textoCifrado = texto
@@ -11,22 +19,18 @@ function encriptar(){
     .replace(/i/gi, "imes")
     .replace(/o/gi, "ober")
     .replace(/u/gi, "ufat");
-  
-    if (texto === "") {
-      mensajeCampoVacio();
-    } else {
-        if (!validarTexto(texto)){
-          return;
-        } else { 
-          document.getElementById("mensajeFinal").value = textoCifrado;
-          document.getElementById("mensajeInicial").value = "";
-          document.getElementById("ocultar").style.display= "none";
-          document.getElementById("mensajeFinal").style.display= "block";
-          document.getElementById("copiar").style.display= "block";
-        }
-    }
-}
 
+    if (texto.match(caracteresEsp)){     //Valida que no haya caracteres especiales
+      mensajeError();
+    } else if (texto.length != "" && !texto.match(caracteresEsp)) {     //solo encripta si no hay caracteres especiales
+      document.getElementById("mensajeFinal").value = textoCifrado;
+      cambioDisplay();
+      } else {
+        mensajeCampoVacio();
+      }
+  }
+
+// FUNCION PARA DESENCRIPTAR TEXTO
 function desencriptar(){
   let textoCifrado = document.getElementById("mensajeInicial").value;
   let texto = textoCifrado
@@ -36,32 +40,25 @@ function desencriptar(){
     .replace(/ober/gi, "o")
     .replace(/ufat/gi, "u");
 
-    if (texto === "") {
-      mensajeCampoVacio();
-    } else {
-        if (!validarTexto(textoCifrado)){
-          return;
-        } else { 
-          document.getElementById("mensajeFinal").value = texto;
-          document.getElementById("mensajeInicial").value = "";
-          document.getElementById("ocultar").style.display= "none";
-          document.getElementById("mensajeFinal").style.display= "block";
-          document.getElementById("copiar").style.display= "block";
-        }
-    }
+    if (textoCifrado.match(caracteresEsp)){     //Valida que no haya caracteres especiales
+      mensajeError();
+    } else if (textoCifrado.length != "" && !texto.match(caracteresEsp)) {     //solo desencripta si no hay caracteres especiales
+      document.getElementById("mensajeFinal").value = texto;
+      cambioDisplay();
+      } else {
+        mensajeCampoVacio();
+      }
   }
 
-function validarTexto() {
-  let textoValidar= document.getElementById("mensajeInicial").value;
-  const contieneMayusculas = /[A-ZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜÑÂÊÎÔÛ]/.test(textoValidar);
-  const contieneAcentos = /[áéíóúàèìòùäëïöüñâêîôû]/.test(textoValidar);
-  const contieneCaracteresEspeciales = /[@#$%&/¨`~*^{}°<>]/.test(textoValidar);
-
-  if (contieneMayusculas || contieneAcentos || contieneCaracteresEspeciales) {
-    mensajeError();
-  } return true;
+// OCULTA LA IMAGEN Y MUESTRA EL TEXTO ENCRIPTADO/DESENCRIPTADO
+function cambioDisplay(){
+  document.getElementById("mensajeInicial").value = "";
+  document.getElementById("ocultar").style.display= "none";
+  document.getElementById("mensajeFinal").style.display= "block";
+  document.getElementById("copiar").style.display= "block";
 }
-  
+
+// COPIA EL TEXTO ENCRIPTADO/DESENCRIPTADO EN EL PORTAPAPELES
 function copiarTexto(){
   var resultado = document.getElementById("mensajeFinal").value; 
   if (resultado.length != 0) {
@@ -72,10 +69,11 @@ function copiarTexto(){
   }
 }
 
+// MENSAJES POPUP//
 function mensajeCampoVacio(){
-  var textareaValue = document.getElementById("mensajeInicial").value;
-  var textareaValue2 = document.getElementById("mensajeInicial").value;
-  if (textareaValue.trim() === "" || textareaValue2.trim() === "" ) {
+  var textarea = document.getElementById("mensajeInicial").value;
+  var textarea2 = document.getElementById("mensajeInicial").value;
+  if (textarea === "" || textarea2 === "") {
     Swal.fire({
       html: '<p class="popup__texto">Ingresa el texto que desees encriptar o desencriptar</p>',
       confirmButtonText: 'Aceptar',
@@ -97,7 +95,7 @@ function mensajeCampoVacio(){
 
 function mensajeError(){
   Swal.fire({
-    html: '<p class="popup__texto">No acepta mayúsculas, acentos o carácteres especiales</p>',
+    html: '<p class="popup__texto">No acepta mayúsculas, acentos o carácteres especiales.<br>Sí se pueden usar signos de puntuación como: , . : ; - ¿? !¡</p>',
     confirmButtonText: 'Aceptar',
     customClass: {
       popup:'popup__box',
