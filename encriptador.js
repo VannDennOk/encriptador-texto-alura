@@ -69,7 +69,8 @@ function copiarTexto(){
   }
 }
 
-// MENSAJES POPUP//
+// MENSAJES POPUP
+// Ahora son funcionales pero faltaría revisar cómo acortar el código.
 function mensajeCampoVacio(){
   var textarea = document.getElementById("mensajeInicial").value;
   var textarea2 = document.getElementById("mensajeInicial").value;
