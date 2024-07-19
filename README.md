@@ -11,7 +11,7 @@
 <br>:small_blue_diamond: La letra "i" es convertida para "imes"
 <br>:small_blue_diamond: La letra "o" es convertida para "ober"
 <br>:small_blue_diamond: La letra "u" es convertida para "ufat"</p>
-<h3>Requisitos :card_index:</h3>
+<h3>Requisitos :clipboard:</h3>
 <p>:heavy_check_mark: Debe funcionar solo con letras minúsculas
 <br>:heavy_check_mark: No deben ser utilizados letras con acentos ni caracteres especiales.
 <br>:heavy_check_mark: La página debe tener campos para la inserción del texto que será encriptado o desencriptado.
