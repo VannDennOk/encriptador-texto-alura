@@ -18,10 +18,11 @@
 <br>     :heavy_check_mark: La página debe tener campos para la inserción del texto que será encriptado o desencriptado.
 <br>     :heavy_check_mark: El usuario debe poder escoger entre las dos opciones: encriptar o desencriptar.
 <br>     :heavy_check_mark: El resultado debe ser mostrado en la pantalla.</p>
-<h3>Ejemplo</h3>
-      "gato" => "galtober"
+<h3>Ejemplo</h3>      
+      <p align="left"><img src="https://img.shields.io/badge/gato-gray?style=flat"> <img src="https://img.shields.io/badge/galtober-gray?style=flat"></p>
       <br>
-      "galtober" => "gato"
+      <p align="left"><img src="https://img.shields.io/badge/galtober-gray?style=flat"></p>
+      <p align="left"><img src="https://img.shields.io/badge/gato-gray?style=flat"></p>
 <h3>Extras</h3>
 <p>   Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.</p>
 <p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
