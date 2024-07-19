@@ -28,3 +28,9 @@
 <p>El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.
 <br>Mi perfil de Git Hub: https://github.com/VannDennOk
 <br>Mi perfil de LinkedIn: https://www.linkedin.com/in/vaninadenegri</p>
+<h2>Reconocimientos :crown:</h2>
+<p> Links útiles y utilizados para realizar este README:<br>
+<br>[Lista de emojis para Git Hub] (https://gist.github.com/rxaviers/7360908)
+<br>[Img Shields] (https://shields.io)
+<br>[Ejemplo-Modelo de ReadMe] (https://github.com/othneildrew/Best-README-Template/tree/master)</p>
+
