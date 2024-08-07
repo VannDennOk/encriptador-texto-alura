@@ -32,12 +32,12 @@
 
 <h2>Autoría :woman:</h2>
 <p>El proyecto fue desarrollado por Vanina Denegri en base a los diseños provistos por Alura-Latam.
-<br>Mi perfil de <img alt="Static Badge" src="https://img.shields.io/badge/Mi_perfil_de_GitHub-purple">: https://github.com/VannDennOk
-<br>Mi perfil de <img alt="Static Badge" src="https://img.shields.io/badge/Mi_perfil_de_LinkedIn-blue">: https://www.linkedin.com/in/vaninadenegri</p>
+<br>
+<br><a href="https://github.com/VannDennOk/"><img alt="Static Badge" src="https://img.shields.io/badge/Mi_perfil_de_GitHub-purple"></a>
+<br>
+<br><a href="https://www.linkedin.com/in/vaninadenegri/"><img alt="Static Badge" src="https://img.shields.io/badge/Mi_perfil_de_LinkedIn-blue"></a>
 
 <h2>Reconocimientos :crown:</h2>
 <p> Links útiles y utilizados para realizar este README:<br>
-<br>Lista de emojis para Git Hub (https://gist.github.com/rxaviers/7360908)
-<br>Img Shields (https://shields.io)
-<br>Ejemplo-Modelo de ReadMe (https://github.com/othneildrew/Best-README-Template/tree/master)</p>
+<p> &#128312; <a href="https://gist.github.com/rxaviers/7360908"><img alt="Static Badge" src="https://img.shields.io/badge/Lista_de_emojis_para_GitHub-black"></a> &#128312; <a href="https://shields.io"><img alt="Static Badge" src="https://img.shields.io/badge/Img Shields-black"></a> &#128312; <a href="https://github.com/othneildrew/Best-README-Template/tree/master"><img alt="Static Badge" src="https://img.shields.io/badge/Ejemplo_Modelo_de_ReadMe-black"></a> &#128312; </p>
 
